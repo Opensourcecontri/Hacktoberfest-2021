@@ -1,4 +1,5 @@
- print("GUESSING GAME")
+print("GUESSING GAME")
+#terminal based number guessing game having 1/6 of wining probability. This one is the hard level.
 
 while(True):
     x= str(input("Shall we start the game: \n"))
@@ -29,6 +30,6 @@ while(True):
                          print("Thanks for playing")
                       else:
                             a5= int(input("Your last guess is:"))
-                            print("Great your guess is right \n Wow, you won ;-)") if a5==n else print(f"Better luck next time and answer was {n}. \n GAME OVER")
+                            print("Great your guess is right \n Wow, you won ;-)") if a5==n else print(f"Better luck next time and answer was {n}.\nGAME OVER")
     else:
        print("Hope you will come again")
