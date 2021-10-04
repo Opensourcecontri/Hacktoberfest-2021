@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizz APP</title>
+   <link rel="stylesheet" href=" {{ url_for('static',filename='style.css') }}" type="text/css">
+</head>
+<body><section>
+<div class="custom-shape-divider-top-1625589863">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div></section>
+<div class="quiz-container" id="quiz"><form >
+    <div class="quiz-header">
+        <h2 id="question">Answer The Question</h2>
+        <h2 id="question">{{ Question | safe }}</h2>
+        <ul >
+            <li>
+                <input type="radio" id="a" name="answer" value='{{ Option_a | safe}}' class="answer">
+                <label id="a_text" for="a">{{ Option_a | safe}}</label>
+            </li>
+            <li>
+                <input type="radio" id="b" name="answer" value="{{ Option_b | safe }}" class="answer">
+                <label id="b_text" for="b">{{ Option_b | safe }}</label>
+            </li>
+            <li>
+                <input type="radio" id="c" name="answer" value="{{ Option_c | safe }}" class="answer">
+                <label id="c_text" for="c">{{ Option_c | safe }}</label>
+            </li>
+            <li>
+                <input type="radio" id="d" name="answer" value="{{ Option_d | safe }}" class="answer">
+                <label id="d_text" for="d">{{ Option_d | safe }}</label>
+            </li>
+        </ul>
+    </div>
+    <button formaction="/action-submit" id="submit">Submit</button></form>
+</div>
+</body>
+<footer style="margin-top: 25%">
+    <h4>Developed by<a href="https://www.molidebugger.me/">Mohamed Ali. A</a></h4>
+</footer>
+</html>

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #d3cce3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+            to right,
+            #d3cce3,
+            #e9e4f0
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    font-family: "Happy Monkey", cursive;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    margin-top: 25%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 6px -6px #777;
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.quiz-header {
+    padding: 4rem;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ul li label {
+    cursor: pointer;
+}
+button {
+    background-color: #1e90ff;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    border: none;
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1460ac;
+}
+
+button:focus {
+    outline: none;
+    background-color: #1460ac;
+}
+
+/* CSS for Curve */
+.custom-shape-divider-top-1625589863 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1625589863 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 500px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1625589863 .shape-fill {
+    fill: #1E90FF;
+}
