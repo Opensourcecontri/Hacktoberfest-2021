@@ -1,10 +1,10 @@
 pull_request_rules:
-  - name: Automatic merge for master
+  - name: automatic merge for master
     conditions:
       - "#approved-reviews-by>=0"
       - base=master
     actions:
       label:
-        add: ['hacktoberfest-accepted','Hacktoberfest','hacktober-fest','hacktoberfest2021']
+        add: ['hacktoberfest-accepted']
       merge:
         method: merge
