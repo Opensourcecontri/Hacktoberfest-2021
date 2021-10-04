@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <!-- loading bootstrap css file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-evenly">
+            <div class="text-center">
+                <h5>Computer Score</h5>
+                <h4 id="computer-score">0</h4>
+            </div>
+            <div class="text-center">
+                <h5>Your Score</h5>
+                <h4 id="player-score">0</h4>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center align-items-center" style="height: 70vh;">
+            <div class="">
+                <div class="text-center">
+                    <h4>Computer</h4>
+                    <h1 id="computer-ch" style="transform:rotate(180deg);" class="display-1">✊</h1>
+
+                    <div class="my-5">
+                        <br>
+                        <b id="message">Message</b>
+                    </div>
+
+                    <h1 class="display-1" id="player-ch">✊</h1>
+                    <h4>You</h4>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+  
+    <div class="d-flex justify-content-center fixed-bottom">
+        <button class="btn btn-primary p-0">
+            <h1 class="display-3 p-4" id="rock">✊</h1>
+        </button>
+        <button class="btn btn-primary p-0 mx-2">
+            <h1 class="display-3 p-4" id="paper">🖐</h1>
+        </button>
+        <button class="btn btn-primary p-0">
+            <h1 class="display-3 p-4" id="scissors">✌️</h1>
+        </button>
+    </div>
+    </div>
+
+    <!-- loading script.js -->
+    <script src="main.js"></script>
+    
+    <!-- loading bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
