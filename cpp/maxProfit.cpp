@@ -1,102 +1,62 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// APPROACH 1 -- GREEDY
-int profit(int *bottles, int n){
-    int year=1, profit=0;
-    for(int i=0; i<n;){
-        if(bottles[i]<bottles[n-1]){
-            profit=profit+ year*bottles[i];
-            i++;
-            year++;
-        }
-        else{
-            profit = profit + year*bottles[n-1];
-            n--;
-            year++;
-        }
+//ap-1
+int maxProfit1(int * arr, int totalLen){
+    if(totalLen== 0) return 0;
+
+    int best =0;
+    for(int len =1; len <= totalLen; len++){
+        int netProfit = arr[len] + maxProfit1(arr, totalLen-1);
+        best = max(best, netProfit);
     }
-    return profit; //this is the greedy approach of the solution
+    return best;
 }
 
-//APPROACH 2 
-int cnt=0;
-int maxProfit(int arr[], int be, int en, int year){
-    if(be>en){
-        return 0;
-    }
+//ap-2 --> memoization
 
-    int q1 = arr[be] * year + maxProfit(arr, be+1, en, year+1);
-    int q2 = arr[en] * year + maxProfit(arr, be, en-1, year+1);
-    int ans = max(q1,q2);
-    return ans;
+int memo[1000];
+
+int maxProfit(int * arr, int totalLen){
+    if(totalLen==0) return 0;
+
+    if(memo[totalLen]!=-1) return memo[totalLen];
+
+    int best = 0;
+    for(int len =1; len<=totalLen; len++){
+        int netProfit = arr[len] + maxProfit(arr, totalLen-len);
+        best = max(best, netProfit);
+    }
+    memo[totalLen]=best;
+    return best;
 }
 
-//APPROACH -3
-int memo[100][100];
-int maxProfit3(int arr[], int be, int en, int year){
-    ++cnt;
-    if(be>en){
-        return 0;
-    }
+//dp
+int mazProfit_bu(int *arr, int totalLen){
+    int dp[100]={};
     
-    if(memo[be][en]!=-1) return memo[be][en];
-
-    int q1 = arr[be] * year + maxProfit3(arr, be+1, en, year+1);
-    int q2 = arr[en] * year + maxProfit3(arr, be, en-1, year+1);
-    int ans = max(q1,q2);
-    memo[be][en] = ans;
-    return ans;
-}
-
-//APPROACH - 4 DP
-int maxProfitDP(int *arr, int n){
-    int dp[100][100]={};
-    int year = n;
-    for(int i=0; i<n; i++){
-        dp[i][i]= year * arr[i];
-    }
-    year--;
-
-    for(int len=2; len<=n; len++){
-        int srt =0;
-        int end = n-len;
-        while(srt<=end){
-            int endwindow = srt+ len -1;
-            dp[srt][endwindow]= max(
-                arr[srt]*year + dp[srt+1][endwindow],
-                arr[endwindow]*year + dp[srt][endwindow-1]
-        );
-            srt++;
+    for(int len =1; len<= totalLen; len++){
+        int best =0;
+        for(int cut=1; cut<=len; cut++){
+            best = max(best, arr[cut] + dp[len-cut]);
         }
-        year--;
+        dp[len]=best;
     }
-
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            cout<<setw(3)<< dp[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-    return dp[0][n-1];
+    return dp[totalLen];
 }
 
 int main(){
-    // int bottles[]={1,4,2,3};
-    // int ans = profit(bottles, 4);
-    int arr[100];
-    int n; cin>>n; //no of bottles
-    for(int i=0; i<n; i++){
-        cin>>arr[i]; //price of the bottles
+    int priceOfeachLen[100];
+    int totalLen;
+    cin>>totalLen;
+    for(int i=1; i<=totalLen; i++){
+        cin>>priceOfeachLen[i];
     }
-    // int ans = maxProfit(arr, 0,n-1,1);
-    // ap-3 memo
-    // cnt = 0;
-    // memset(memo, -1, sizeof(memo));
-    // int ans = maxProfit3(arr, 0, n-1, 1);
-    // ap-4 dp
-    int ans = maxProfitDP(arr, n);
-    cout<<ans<<"\n"; 
-    // cout<<cnt;
+    for(int i=0; i<=totalLen; i++){
+        memo[i]=-1;
+    }
+    // int ans = maxProfit(priceOfeachLen, totalLen);
+    int ans = mazProfit_bu(priceOfeachLen, totalLen);
+    cout<<ans;
     return 0;
 }
