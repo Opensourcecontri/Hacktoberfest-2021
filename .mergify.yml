@@ -1,5 +1,5 @@
 pull_request_rules:
-  - name: Automatic merge on approval
+  - name: Automatic merge for master
     conditions:
       - "#approved-reviews-by>=0"
       - base=master
