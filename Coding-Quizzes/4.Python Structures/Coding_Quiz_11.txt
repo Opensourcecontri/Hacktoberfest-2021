@@ -1,0 +1,2 @@
+Write  Python code lines to get the sum all numbers in a list then get the result of multiplying them, then get the largest number of them, 
+then get the smallest number of them, finally get the numbers of items in that list.

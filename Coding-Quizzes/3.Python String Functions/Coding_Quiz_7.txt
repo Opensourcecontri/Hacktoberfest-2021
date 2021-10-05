@@ -1,0 +1,1 @@
+Write a program in python contain string "Don't turn left!" and then check if this string contain ( '!') and('m')

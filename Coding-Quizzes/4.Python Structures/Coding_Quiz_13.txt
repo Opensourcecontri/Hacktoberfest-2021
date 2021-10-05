@@ -1,0 +1,2 @@
+Write a python code to arrange the following dictionary values:
+{'key_1': [20, 80, 50], 'key_2': [200, 10, 100], 'key_3': [300, 20, 400]}

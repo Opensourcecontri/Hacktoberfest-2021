@@ -1,0 +1,448 @@
+If statement:
+If statement is commonly used in programs coded in python and the strcture of if statement as follow:
+
+if condition = value:
+
+do something
+
+elif condition = value:
+
+do something
+
+else:
+
+do some thing
+
+
+
+
+
+If name == “Alex”:
+
+print(“Hi Alex”)
+
+elif name == “Sara”:
+
+print(“Hi Sara”)
+
+elif name == “kate”:
+
+print(“Hi Kate”)
+
+else:
+
+print(“Hi everybody”)
+
+
+
+distance = input(“what is the distance of this road?”)
+
+>>> what is the distance of this road?
+
+25
+
+msg= “this road 11 if distance == 20 else “this is another road”
+
+>>>Print (msg)
+
+we observe that user input distance = 25
+
+So it will print :
+
+this is another road
+
+
+
+
+For Loop:
+
+The for loop Looping through an iterable executes a block of code repeatedly until the condition in the for statement is no longer valid.
+
+
+
+an iterable In Python refers to anything that can be looped over, such as a string, list or tuple.
+
+The syntax for looping through an iterable is as follows:
+
+for i in iterable:
+
+print (i)
+
+
+
+
+
+Example:
+
+colors = [‘red', ‘yellow', ‘green', ‘blue‘, black]
+
+for color in colors:
+
+print (color)
+
+
+
+1. we first declare the list of colors and give it the members ‘red', ‘yellow', ‘green', ‘blue‘, black.
+
+
+
+2. Next the statement for color in colors, so the program loops through the colors list and assigns each member in the list to the variable color.
+
+
+
+If you run the program, you’ll get
+
+red
+
+yellow
+
+green
+
+blue
+
+black
+
+
+
+the index of the members in the list can be displayed by use the enumerate() function.
+
+for index, color in enumerate(colors):
+
+print (index, color)
+
+>>>0 red
+
+1 yellow
+
+2 green
+
+3 blue
+
+4 black
+
+
+
+
+
+Looping through a sequence of numbers
+
+
+
+
+
+Example :
+
+loop through a string data.
+
+msg = ‘Hi’
+
+for i in msg:
+
+print (i)
+
+
+
+>>>H
+
+i
+
+
+
+range() function:
+
+if start is not given, the numbers generated start from zero.
+
+For instance,
+
+range(5) will generate the list [0, 1, 2, 3, 4]
+
+range(3, 10) will generate [3, 4, 5, 6, 7, 8, 9]
+
+range(4, 10, 2) will generate [4, 6, 8]
+
+
+
+
+
+
+
+
+
+
+
+the range() function works inside a for statement:
+
+Example:
+
+
+
+for i in range(3):
+
+print (i)
+
+>>>0
+
+1
+
+2
+
+
+
+
+
+
+break: using break in for loop:
+
+sometimes we want to stop the loop when meet specific certain condition so we use the break.
+
+Example:
+
+a = 0
+
+for i in range(10):
+
+a+= 2
+
+print (‘i = ’, i, ‘, a= ’, a)
+
+if a== 4:
+
+break
+
+
+
+we will get:
+
+i = 0 , a = 2
+
+i = 1 , a= 4
+
+
+
+Without the break, the coder will loop from i = 0 to i = 10 because we used the function range(10).
+
+
+
+However with the break keyword, the program ends prematurely at i = 2. This is because when i = 2, j reaches the value of 6 and the break keyword causes the loop to end.
+
+
+
+
+
+continue: using continue in for loop:
+
+We use continue to skip specific step in the iteration process.
+
+Example:
+
+for num in range(3)
+
+if num == 1:
+
+continue
+
+print('Current number :', num)
+
+Result: Current number : 0
+
+Current number : 2
+
+
+
+
+
+
+
+
+
+While Loop
+
+while loop repeatedly executes code which inside the loop while specific condition remains valid.
+
+Composition of while loop is as follow:
+
+while condition is true:
+
+do something
+
+Firstly we declare a variable to function as a loop counter(variable counter)
+
+The condition in which the while statement will evaluate the value of counter to determine if it something more than or less than, so the loop
+
+will be executed.
+
+
+
+
+
+Example:
+
+>>>variable_count= 3
+
+while variable_count > 0:
+
+variable_count = variable_count - 1
+
+print ("Variable_count =" , variable_count)
+
+
+
+variable_count = 3
+
+variable_count = 2
+
+variable_count = 1
+
+
+
+
+
+
+
+
+
+Continue: using continue in while loop:
+
+We use continue to skip specific step in the iteration process of while loop.
+
+Example:
+
+num = 3
+
+while num > 0:
+
+num -= 1
+
+if num == 1:
+
+continue
+
+print('Current number:', num)
+
+Result: Current number : 0
+
+Current number : 2
+
+
+
+
+
+
+
+Zip( ) iterator examples:
+
+print(list(zip(['red', 'yellow', 'green'], [1, 2, 3])))
+
+>>>[('red ', 1), ('yellow ', 2), ('green', 3)]
+colors = ['red', 'yellow', 'green']
+
+nums = [1, 2, 3]
+
+for color, num in zip(colors, nums):
+
+print("{}: {}".format(color, num))
+
+'red’: 1
+
+'yellow': 2
+
+'green': 3
+
+
+
+
+
+
+
+
+
+Zip( ) iterator +* examples for lists : unzip nested lists
+
+Eaxmple 3:
+
+>>>colors = ['red', 'yellow', 'green']
+
+>>>nums = [1, 2, 3]
+
+>>>colors_list = [colors, nums]
+
+>>>for colors, nums in zip(*colors_list):
+
+print(colors, nums)
+
+red 1
+
+yellow 2
+
+green 3
+
+Zip( ) iterator+ * example for tuples: unzip nested tuples
+
+>>>colors = ('red', 'yellow', 'green')
+
+>>>nums = (1, 2, 3)
+
+>>>colors_list = (colors, nums)
+
+>>>for colors, nums in zip(*colors_list):
+
+print(colors, nums)
+
+red 1
+
+yellow 2
+
+green 3
+
+enumerate( ) iterator: for lists:
+
+It returns an iterator of tuples containing indices and values of a list. use this when you want the index along with each element of an iterable in a loop.
+>>>letters = ['a', 'b', 'c', 'd', 'e']
+
+>>>for i, letter in enumerate(letters):
+
+print(i, letter))
+0 a
+1 b
+2 c
+3 d
+4 e
+
+enumerate( ) iterator:for tuples
+
+Example 2:
+
+letters =('a', 'b', 'c', 'd', 'e‘)
+for i, letter in enumerate(letters):
+print(i, letter)
+0 a
+1 b
+2 c
+3 d
+4 e
+
+Try, Except
+
+This statement can take over how the program run when an error takes places: the code as following:
+
+try:
+
+do something
+
+except:
+
+do another action when an error takes place
+
+
+
+Try, Except
+
+Example:
+
+try:
+print(word)
+except NameError:
+print("Variable word is not defined")
+except:
+print("Something else went wrong")
+

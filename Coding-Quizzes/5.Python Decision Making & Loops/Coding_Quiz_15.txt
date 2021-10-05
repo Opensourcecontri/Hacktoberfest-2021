@@ -1,0 +1,5 @@
+Write a program in python check the person age then show him the price of train ticket that fit his age in dollars:¶
+children until 18 years ticket = 2
+old people bigger than or equal 60 years ticket = 5
+young people from 18 - 59 year ticket = 10
+and don't forget to declare your age:

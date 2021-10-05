@@ -1,0 +1,1 @@
+Write a program in python that print a list of numbers from 1 to 9 in descending order using while loop, then print the last 5 items:

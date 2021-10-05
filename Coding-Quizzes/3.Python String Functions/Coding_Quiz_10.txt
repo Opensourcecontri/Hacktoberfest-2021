@@ -1,0 +1,9 @@
+Run the following lines of coding to see the result:
+string = 'python is powerful language'
+string.capitalize()
+string = '1st programming language'
+string.capitalize()
+string = 'pYTHON IS POWERFUL PROGRAMMING LANGUAGE'
+string.swapcase()
+string = 'Python the powerful programming language'
+string.title()

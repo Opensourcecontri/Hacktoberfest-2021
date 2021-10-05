@@ -1,0 +1,316 @@
+Recap
+Functions: String functions in python:
+Format() function :
+
+>>>name = “Alexander”
+
+>>>car_color = “red.”
+
+>>>print(“hello world, my name is”+ “ ”+name+“ ”+“,and my car color is”
+
++ “ “+car_color)
+
+hello world, my name is Alexander ,and my car color is red
+
+msg = “hello world, my name is {} , and my car color is {}.format(name, car_color)
+
+>>> print(msg)
+
+hello world, my name is Alexander ,and my car color is red.
+
+
+
+
+
+String len() function:
+>>> print(len(msg))
+
+58
+
+>>> print(len(name))
+
+9
+
+>>> print(len(name[0:4]))
+
+4
+
+>>> Print(Name[0:4])
+
+Alex
+
+
+
+Used to count the entire string or specific character of a string
+
+>>>‘This is user car’.count(‘r’)
+
+2
+
+In order to count from index 5 to end of string
+
+>>>‘This is user car’.count(‘r’, 5)
+
+2
+
+In order to count from index 5 to 12
+>>> ‘This is user car(‘s’, 5, 12 )
+
+1
+
+
+
+In orde count ‘T’. There’s only 1 ‘T’ as the function is case sensitive:
+
+Example:
+
+
+
+>>>‘This is user car’.count(‘T’)
+
+1
+
+>>>‘This is user car’.count(‘u’)
+
+1
+
+>>>‘This is user car’.count(‘U’)
+
+0
+
+
+
+
+
+
+
+endswith () and startswith() functions:
+
+this function Return True if the string ends with the specified suffix, otherwise return False and it is case-sensitive function.
+
+Example:
+
+In order to check if a string contain specific suffix like car
+
+>>>‘user_car’.endswith(‘car’)
+
+True
+
+# check from index 4 to end of string
+
+>>>‘‘user_car’.endswith(‘car’, 4)
+
+True
+
+
+
+
+
+
+
+To check from index 5 to 7
+
+>>>‘user_car’.endswith(‘car’, 5, 7)
+
+False
+
+To check from index 4 to 8
+
+>>>‘‘user_car’.endswith(‘car’,4, 8)
+
+True
+
+In order to use a tuple of suffixes as we check from index 4 to 8
+
+>>>‘‘user_car’.endswith((‘car’, ‘ar’), 4, 8)
+
+True
+
+Startswith() like endwiths() but used for bega
+
+
+
+
+
+Find() string function:
+
+Return the index in the string where the first occurrence of the substring sub is found
+
+Examples:
+
+In order to check specific character in a string
+
+>>>‘This is user_car’.find(‘i’)
+
+2
+
+In order to check from index 2 to end of a string
+
+>>>‘This is user_car’.find(‘s’, 2)
+
+3
+
+
+
+
+
+In order to check from index 8 to 12
+
+>>>‘This is user_car’.find(‘s’, 8,12 )
+
+9
+
+In order to check special character which is not found in string
+
+.find() function is like .index() function but differ in the next example:
+
+>>> 'This is user_car'.find(‘d’)
+
+-1
+
+>>> 'This is user_car'.index(‘d’)
+
+ValueError
+
+
+
+
+
+islower () and isupper() functions:
+
+islower() return True if all characters in the string are lowercase and return False otherwise.
+
+[Example]
+
+>>>‘abc’.islower()
+
+True
+
+>>>‘ABc’.islower()
+
+False
+
+>>>‘ABC’.islower()
+
+False
+
+
+
+isupper() :
+
+return True if all characters in the string are uppercase and return False otherwise.
+
+Examples:
+
+>>>‘ABC’.isupper()
+
+True
+
+>>>‘AbC’.isupper()
+
+False
+
+>>>‘abc’.isupper()
+
+False
+
+
+
+lower() and upper() functions:
+
+Lower (): the function that convert string case into lower case.
+
+Example:
+
+>>>‘This is User Car’.lower()
+
+this is user car
+
+Example:
+
+
+
+upper (): the function that convert string case into upper case.
+
+>>>‘This is User Car’.upper ()
+
+THIS IS USER CAR
+
+
+
+
+replace() string function:
+
+This function return a copy of the string with all occurrences of substring old replaced by new.
+
+[Example]
+
+>>>‘This is user car’.replace(‘user’, ‘my’)
+
+This is my car
+
+In order to replace a character many times:
+
+>>>‘This is user car’.replace(‘s’, ‘c’, 3)
+
+'Thic ic ucer car'
+
+
+
+
+strip() string functions:
+
+This function return a copy of the string with the starting orending character removed but If character is not provided, whitespaces will be removed.
+
+Example:
+
+>>>‘ This is my car’.strip()
+
+'This is my car'
+
+>>>‘ This is my car’.strip(‘p’)
+
+'This is a my car'
+
+>>>‘This is my car’.strip(‘r’)
+
+‘This is my ca’
+
+
+
+Print and Input functions:
+
+We take and practice print() function which is so simple, now we will take about input() function which store variable data as string
+
+Example:
+
+>>> user_name = input(“Please enter your name”)
+
+Please enter your name
+
+>>> Alex
+
+>>> print(user_name)
+
+Alex
+
+How to deal with string special characters in python?
+
+In order to print string without errors we should use back slash
+
+Character to prevent interfere of these characters with string quotes.
+
+Example:
+
+>>> msg1= “I’m”
+
+>>> msg1= “I\’m”
+
+>>> msg2= “I can’t”
+
+>>> msg2 =" can\’t”
+
+>>> print(msg1+” “ +msg2)
+
+I’m can’t
+

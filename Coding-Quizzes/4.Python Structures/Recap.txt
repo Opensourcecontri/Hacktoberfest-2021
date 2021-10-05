@@ -1,0 +1,566 @@
+Lists in python : []
+
+Lists are a collection of data values stored as a list and values are separated by a comma.
+
+To declare a list, you code as following :
+
+We use square brackets [ ] when declaring a list.
+
+list_name = [Multiple values are separated by a comma]
+
+Example:
+
+user_cars_colors = [‘red’, ‘yellow’, ‘black’, ‘blue’]
+
+List commands in python
+
+user_cars_colors = [‘red’, ‘yellow’, ‘black’, ‘blue’]
+
+To assign user_cars_colors (from index 1 to 3) and print
+
+user_cars_colors = user_cars_colors[1:3]
+
+print (user_cars_colors)
+
+>>>You’ll get [yellow, black]
+
+In order to modify the second item in List and print the updated list
+
+user_cars_colors[1] = ‘green’
+
+print(user_cars_colors)
+
+>>> [‘red’, ‘green’, ‘black’, ‘blue’]
+
+
+
+To append a new item to user_cars_colors and print the list :
+
+user_cars_colors.append(“white”)
+
+print(user_cars_colors)
+
+>>>[‘red’, ‘green’, ‘black’, ‘blue’, ‘white’]
+
+To remove the fifth item from user_cars_colors and print the list :
+
+del user_cars_colors [4]
+
+print(user_cars_colors)
+
+>>>[‘red’, ‘green’, ‘black’, ‘blue’]
+
+
+
+len(): returns how many elements are in a list.
+
+Users_cars_speeds = [100, 50, 30, 20,120]
+
+len(Users_cars_speeds)
+
+>>> 5
+
+max() returns the greatest element of the list.
+
+Users_cars_speeds = [100, 50, 30, 20,120]
+
+max(Users_cars_speeds)
+
+>>> 120
+
+
+
+
+
+
+
+
+
+
+
+min(): returns the smallest element in a list.
+
+Users_cars_speeds = [100, 50, 30, 20,120]
+
+min(Users_cars_speeds)
+
+>>> 20
+
+sorted() returns a copy of a list ordered from smallest to largest
+
+Users_cars_speeds = [100, 50, 30, 20,120]
+
+sorted(Users_cars_speeds)
+
+>>> 120, 100, 50, 30, 20
+
+
+
+
+
+
+
+
+
+Sum():
+
+returns the sum of the elements in a list.
+
+>>> Users_cars_speeds = [100, 50, 30, 20,120]
+
+>>>sum(Users_cars_speeds)
+
+320
+
+pop():
+
+removes the last element from a list and returns it.
+
+>>> Users_cars_speeds = [100, 50, 30, 20,120]
+
+>>> Users_cars_speeds.pop
+
+120
+
+
+
+
+
+Using range( ) in list:
+
+>>> x = range(5)
+
+>>> print(x)
+[0,1,2,3,4]
+Zero = x[0] equals 0, lists are 0-indexed
+One = x[1]
+Two = x[2]
+
+Three = x[3]
+
+Four = x[4] fifth element of the x list of range(5).
+Four = x[-1] fifth element of the x list of range(5).
+>>>
+
+Tuples : ()
+
+Tuples are just like lists, but we cannot modify their data values.
+
+Example:
+
+Year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+In order to access specific values of a tuple use their indexes like what we do with a list.
+
+so, year_monthes [0] = “January”, & year_monthes [-1] = “December”
+
+
+
+
+
+
+
+Del() tuple function:
+
+This function will delete the whole tuple
+
+[Example]
+
+year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+del year_monthes
+
+print (year_monthes)
+
+=> NameError: name ' year_monthes ' is not defined
+
+
+
+
+
+
+
+In use for tuples:
+
+This function will check if an item is in a tuple
+
+[Example]
+
+year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+‘1’ in year_monthes
+
+=> False
+
+‘January’ in year_monthes
+
+=> True
+
+
+
+
+
+len( ) tuple function:
+
+This function will calculate number of items in tuple.
+
+
+
+[Example]
+
+year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+print (len(year_monthes))
+
+>>> 12
+
+
+
+
+
+
+
+Addition of tuples:
+
+
+
+year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+print (year_monthes +(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+
+>>>(“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+
+
+
+
+
+multiplication of tuples:
+
+
+
+year_monthes = (“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+print (year_monthes * 2)
+
+>>>(“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”, “January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”)
+
+
+
+Dictionary : {}
+
+Dictionary is group of pairs of data values each pair have two parts
+
+Dictionary key and data value {key1:value1, key2:value 2, etc….}
+
+Example:
+
+>>> User_name_and_car_color = { “David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+In order to declare a dictionary we use dict() method
+
+>>> User_name_and_car_color = dict(David = red, John = green, Sara = yellow)
+
+{“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+
+
+In order to add a new item and print the updated dictionary:
+
+>>>user_name_and_car_color[“Kate”] = “black”
+
+>>>print(user_name_and_car_color)
+
+{“Kate”, “black”, “David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+In order to remove the item with key = “Kate” and print dictionary:
+
+>>>del user_name_and_car_color [“Kate”]
+
+>>>print(user_name_and_car_color)
+
+{“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+
+
+
+
+
+
+Example:
+
+>>>Print(user_name_and_car_color)
+
+{“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+
+
+In order to print the item with key = “David” code as following:
+
+>>>print(user_name_and_car_color[“David”]) red
+
+
+
+In order to print the item with key =Sara code as following:
+
+>>> print(user_name_and_car_color[“Sara”])
+
+yellow
+
+
+
+In order modify the item with key = John and print the dictionary
+
+>>> user_name_and_car_color[“John”] = “white”
+
+>>>print(user_name_and_car_color”David”)
+
+red
+
+
+
+
+
+
+
+Dictionary .get() :
+
+returns a value for the given key If the key is not found, it’ll return the keyword None.
+
+Example:
+
+user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+print(user_name_and_car_color)
+
+>>>{“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+print(user_name_and_car_color. get(“John”))
+
+>>>green
+
+
+
+
+
+
+
+user_name_and_car_color = {“David”:”red”,“John”:”green”, ”Sara”: “yellow”}
+
+
+
+>>>print(user_name_and_car_color)
+
+{“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+
+
+print(user_name_and_car_color. get(“kate”))
+
+None
+
+
+
+
+
+
+
+Dictionary .del( ):
+
+It delete the whole dictionary.
+
+Example:
+
+>>> user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+>>> user_name_and_car_color.del()
+
+>>>print (user_name_and_car_color)
+
+NameError: name 'dic1' is not defined
+
+
+
+
+
+
+
+
+
+Dictionary .clear( ):
+
+It removes all elements of the dictionary, returning an empty dictionary
+
+Example:
+
+>>> user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+>>> user_name_and_car_color.clear()
+
+>>>print (user_name_and_car_color)
+
+{ }
+
+
+
+
+
+Dictionary In( ):
+
+We use it to check if an item is in a dictionary
+
+Example:
+
+>>>user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+Use it on the key
+
+>>>David in user_name_and_car_color
+
+True
+
+>>>Kate in user_name_and_car_color
+
+False
+
+
+
+
+
+Use It on the value:
+
+Example:
+
+user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+‘red’ in user_name_and_car_colo.values()
+
+=> True
+
+‘black’ in user_name_and_car_colo.values()
+
+=> False
+
+
+
+
+
+Dictionary .items( )
+
+We use it to return a list of dictionary’s pairs as tuples
+
+[Example]
+
+user_name_and_car_color = {“David”:”red”, “John”:”green”, ”Sara”: “yellow”}
+
+user_name_and_car_color.items()
+
+>>> dict_items([(“David”:”red”), (“John”:”green”), (”Sara”: “yellow”)])
+
+
+
+
+
+Dictionary .len( ):
+
+We use it to calculate the number of items in a dictionary
+
+Example:
+
+>>>year_monthes = {“January” : 1, “February” : 2, “March” : 3, “April”: 4, “May”: 5, “June”: 6, “July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12 }
+
+>>> print (len(year_monthes))
+
+12
+
+
+
+>>>
+
+
+
+Dictionary . update( ):
+
+We use this to Add one dictionary’s key-values pairs to another. Duplicates are removed.
+
+Example:
+
+>>> year_monthes = {“January” : 1, “February” : 2, “March” : 3, “April”: 4, “May”: 5, “June”: 6}
+
+>>> second_six_year_monthes = {“July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12}
+
+
+
+>>> year_monthes.update(second_six_year_monthes)
+
+
+
+>>> print (year_monthes)
+
+{“January” : 1, “February” : 2, “March” : 3, “April”: 4, “May”: 5, “June”: 6, “July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12 }
+
+>>>print second_six_year_monthes
+
+{“July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12}
+
+So there is no change in second_six_year_monthes dictionary.
+
+
+
+Dictionary . values( )
+
+This will returns list of the dictionary's values
+
+Example:
+
+>>> year_monthes = {“January” : 1, “February” : 2, “March” : 3, “April”: 4, “May”: 5, “June”: 6, “July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12 }
+
+>>>year_monthes.values()
+
+dict_values([‘1', ‘2‘, ‘3', ‘4‘, ‘5', ‘6‘, ‘7', ‘8‘, ‘9', ‘10‘, ‘11', ‘12‘])
+
+
+
+
+Dictionary . keys( )
+
+We use it to returns list of the dictionary's keys
+
+[Example]
+
+>>> year_monthes = {“January” : 1, “February” : 2, “March” : 3, “April”: 4, “May”: 5, “June”: 6, “July”: 7, “August”: 8, “September”: 9, “October”: 10, “November”: 11, “December”: 12 }
+
+>>> year_monthes.keys()
+
+dict_keys([“January”, “February”, “March”, “April”, “May”, “June”, “July”, “August”, “September”, “October”, “November”, “December”])
+
+
+
+Sets:
+
+
+set is data structure, which represents a collection ofspecific elements:
+set = set()
+set.add(a)
+set.add(b)
+set.add(c)
+x = len(set) print(x) >>>x= 3
+y = d in set print(y) >>>y= False
+z = c in set print(z) >>>z= False
+
+
+
+
+Why it is preferred to use sets?
+
+1. It is a very fast code operation on sets than lists.
+2. set is it more appropriate than a list, If we have a large collection of items that we want to use for elements presence in set test:
+
+>>> x = [1,2,3,4,5,6,7,8,9,10]
+
+
+
+>>>print(1 in set(x), 15 in set(x),20 in set(x))
+
+
+(True, False, False)
+

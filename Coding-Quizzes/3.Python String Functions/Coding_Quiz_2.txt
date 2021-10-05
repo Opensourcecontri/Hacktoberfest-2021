@@ -1,0 +1,2 @@
+Write a program in python that take two string to complete and form a message that we can understand?
+msg =  "python is ________  & _______  language and suitable for data analysis"
