@@ -6,9 +6,9 @@ class dsu{
     vector<int> parent;
 public:
     dsu(int n){
-        vector<int> tmp(n);
+        vector<int> tmp(n+1);
         parent.swap(tmp);
-        for(int i=0; i<n; i++)
+        for(int i=0; i<=n; i++)
             parent[i] = -1;
     }
     int find_parent(int a){
