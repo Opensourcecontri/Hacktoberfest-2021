@@ -1,0 +1,2 @@
+Using for loop write a python code that gives the multiply of the following list:
+my_list =[1,4,20,50,100,2000,10000,6]

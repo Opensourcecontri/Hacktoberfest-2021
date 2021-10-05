@@ -1,0 +1,1 @@
+Write a program in python to declare a message for an instructing sign in public place and get the length of that message and count of message letters.

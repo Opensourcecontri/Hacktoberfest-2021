@@ -1,0 +1,10 @@
+msg = "No Smoking here"
+print(len(msg))
+msg.count('o')
+msg.count('s',3,5)
+msg.count('n')
+msg.count('N')
+msg.count('O',7)
+msg.count('o',7)
+msg.count('o',1,7)
+msg.count('o',7,15)

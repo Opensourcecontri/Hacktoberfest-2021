@@ -1,0 +1,3 @@
+Get the result of the union the next two sets:
+a = {'red', 'yellow','orange','green'}
+b = {'red','orange','black'}

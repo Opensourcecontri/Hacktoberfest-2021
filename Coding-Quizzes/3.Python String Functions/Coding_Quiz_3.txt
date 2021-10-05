@@ -1,0 +1,1 @@
+Write  a program in python to declare the name of this programming language and calculate length of this name.

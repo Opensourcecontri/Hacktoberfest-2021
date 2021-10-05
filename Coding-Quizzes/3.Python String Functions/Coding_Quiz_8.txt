@@ -1,0 +1,4 @@
+write a program in python contain  a string message for an electrical instructional sign in the street warning the cars drivers that they don't to turn left.
+then check the string case.
+then make it in upper case  in one code
+finally make it in lower case in a second code.
