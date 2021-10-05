@@ -1,17 +1,15 @@
 package italiandeck;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static italiandeck.ItalianCard.Type.*;
 
 public class ItalianDeck {
 
-    public List<ItalianCard> cards;
+    public LinkedList<ItalianCard> cards;
 
     public ItalianDeck() {
-        cards = new ArrayList<>();
+        cards = new LinkedList<>();
         initializeDeck();
         shuffleDeck();
     }
@@ -26,6 +24,14 @@ public class ItalianDeck {
 
     public void shuffleDeck() {
         Collections.shuffle(cards);
+    }
+
+    public ItalianCard pull() throws NoSuchElementException {
+        return cards.removeFirst();
+    }
+
+    public ItalianCard pick() {
+        return cards.peek();
     }
 
     private void addType(ItalianCard.Type t) {
