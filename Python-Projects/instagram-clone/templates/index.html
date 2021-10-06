@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h3 class="text-center">{{ post.title }} By {{ post.user }}</h3>
+            <img style="width: 50vw; display: block; margin: 0 auto;" src="data:;base64,{{ post.image }}">
+        </div>
+    {% endfor %}
+{% endblock content %}

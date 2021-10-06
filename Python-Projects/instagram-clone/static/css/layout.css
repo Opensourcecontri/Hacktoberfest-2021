@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #d3d3d3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 1vh auto;
+}
+
+form input[type='text'], form input[type='email'], input[type='password'] {
+    border: none;
+    outline: none;
+}
