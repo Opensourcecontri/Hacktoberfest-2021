@@ -1,0 +1,36 @@
+#include<iostream>
+#define fst ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define ll long long int 
+#include<algorithm>
+#include<vector>
+
+using namespace std;
+
+int selectionSort(int ar[],int n){
+    
+    for (int i = 0; i < n-1; i++)
+    {
+        int min_index=i;
+        for (int j = i+1; j < n; j++)
+        {
+            if (ar[j]<ar[min_index])
+            {
+                swap(ar[j],ar[min_index]);
+            }
+            
+        }
+    }
+    
+}
+
+int main(){
+
+    int arr[] = {64, 25, 12, 22 ,11};
+    int n=sizeof(arr)/sizeof(int);
+    selectionSort(arr,n);
+    for(auto var : arr)
+    {
+        cout<<var<<"\n";
+    }   
+return 0;
+}
