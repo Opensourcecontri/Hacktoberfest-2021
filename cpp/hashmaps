@@ -1,0 +1,27 @@
+#include<iostream>
+#define fst ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define ll long long int 
+#include<algorithm>
+#include<map>
+
+using namespace std;
+
+int main(){
+
+    map<string,int> mark;
+    mark["piyush"] = 99;
+    mark["aman"] = 80;
+    mark["kundan"] = 2;
+
+mark.insert({{"kozume",69},{"kuroo",87}});
+    map<string,int> :: iterator itr;
+    for(itr=mark.begin();itr!=mark.end();itr++)
+    {
+        cout<<(*itr).first<<" "<<(*itr).second<<endl;
+    }
+    
+    cout<<mark.find("piyush")->second;
+
+    
+return 0;
+}
