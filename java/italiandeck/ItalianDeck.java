@@ -35,9 +35,16 @@ public class ItalianDeck {
     }
 
     private void addType(ItalianCard.Type t) {
-        for (int i=1; i<=10; i++) {
+        for (int i = 1; i <= 10; i++) {
             cards.add(new ItalianCard(t, ItalianCard.Value.getByNumericValue(i)));
         }
     }
 
+    @Override
+    public String toString() {
+        return "ItalianDeck{" +
+                "cards=" + cards + "\n" +
+                "size=" + cards.size() + "\n" +
+                '}';
+    }
 }
