@@ -1,0 +1,48 @@
+#include<iostream>
+#define fst ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define ll long long int 
+#include<algorithm>
+
+using namespace std;
+
+int Partition(int arr[],int start,int end){
+    int pivot=arr[end];
+    int pIndex = start-1;
+
+    for (int i = start; i <=end-1; i++)
+    {
+        if (arr[i]<pivot)
+        {
+            pIndex++;
+            swap(arr[i],arr[pIndex]);
+        }
+        
+    }
+    swap(arr[pIndex+1],arr[end]);
+    return pIndex+1;
+}
+
+void quickSort(int arr[],int start,int end){
+
+    if(start<end){
+        int pIndex = Partition(arr,start,end);
+        quickSort(arr,start,pIndex-1);
+        quickSort(arr,pIndex+1,end);
+    }
+}
+
+int main(){
+
+     int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    quickSort(arr, 0, n - 1);
+    cout << "Sorted array: \n";
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    return 0;
+    
+return 0;
+}
