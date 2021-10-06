@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 class="text-center">Register</h2>
+    <form action="{{ url_for('register') }}" method="POST">
+        <input placeholder="Username" type="text" name="name" autocomplete="off">
+        <input placeholder="Email" type="email" name="email" autocomplete="off">
+        <input placeholder="Password" type="password" name="password" autocomplete="off">
+        <input placeholder="Confirm Password" type="password" name="confirm-password" autocomplete="off">
+        <input type="submit" value="Register">
+    </form>
+{% endblock content %}

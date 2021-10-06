@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <form enctype="multipart/form-data" action="{{ url_for('create_post') }}" method="POST">
+        <input autocomplete="off" placeholder="Title" type="text" name="title">
+        <input type="file" name="image" accept="image/png, image/jpeg, image/jpg, image/gif">
+        <input type="submit" value="Create Post">
+    </form>
+{% endblock content %}
