@@ -1,7 +1,4 @@
-/*Write a program to input an array of n elements and apply linear search algorithm to
-search an element. Print the position of the element if it is found, otherwise display the
-message the element not found.
-NAME: Abinash Samal Group:C1 Roll No.: 02*/
+
 #include<stdio.h>
 int main()
 {
