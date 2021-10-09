@@ -1,57 +1,65 @@
 #include<bits/stdc++.h>
-const int mod=1e9+7;
 using namespace std;
 
- // } Driver Code Ends
-// function to find longest common subsequence
+#define ll long long int
+#define vi vector<int>
+#define vvi vector<vi>
+#define pb push_back
+#define fo(i,a,b) for(int i=a ; i<b ; i++)
+#define foe(i,a,b) for(int i=a ; i<=b ; i++)
+#define endl '\n'
+#define ff first
+#define ss second
+#define MOD 1000000007
 
-class Solution
-{
-    public:
-    //Function to find the length of longest common subsequence in two strings.
-    int lcs(int x, int y, string s1, string s2)
-    {
-    
-        int dp[x+1][y+1];
-        for(int i=0;i<x+1;i++){
-            for(int j=0;j<=y;j++){
-                if(i==0 or j==0){
-                    dp[i][j]=0;
-                }
-            }
-        }
-         for(int i=1;i<x+1;i++){
-            for(int j=1;j<=y;j++){
-                if(s1[i-1]==s2[j-1])
-                dp[i][j]=1+dp[i-1][j-1];
-            
-                else{
-                    dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
-                }
-            }
-            
-         }
-         return dp[x][y];
-         
-        
-        
-    }
-};
-
-
-// { Driver Code Starts.
 int main()
 {
-    int t,n,k,x,y;
-    cin>>t;
-    while(t--)
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    
+    string s,p,r;
+    cin>>s>>p;
+    ll dp[s.size()+1][p.size()+1];
+    memset(dp,-1,sizeof(dp));
+    for(ll i=0;i<s.size()+1;i++)
     {
-        cin>>x>>y;          // Take size of both the strings as input
-        string s1,s2;
-        cin>>s1>>s2;        // Take both the string as input
-        Solution ob;
-        cout << ob.lcs(x, y, s1, s2) << endl;
+        for(ll j=0;j<p.size()+1;j++)
+        {
+            if(i==0||j==0)
+            dp[i][j]=0;
+        }
     }
-    return 0;
+    for(ll i=1;i<s.size()+1;i++)
+    {
+        for(ll j=1;j<p.size()+1;j++)
+        {
+            if(s[i-1]==p[j-1])
+            dp[i][j]=1+dp[i-1][j-1];
+            else
+            dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+            
+        }
+    }
+    // for printing LCS
+    // ll k=s.size(),m=p.size();
+    // while(k>0 && m>0)
+    // {
+    //     if(s[k-1]==p[m-1])
+    //     {
+    //         r.push_back(s[k-1]);
+    //         k--;
+    //         m--;
+    //     }
+    //     else
+    //     {
+    //      if(dp[k][m-1]>dp[k-1][m])
+    //      m--;
+    //      else
+    //      k--;
+    //     }
+    // }
+    // reverse(r.begin(),r.end());
+    // cout<<r<<endl;
+    cout<<dp[s.size()][p.size()]<<endl;
 }
-  // } Driver Code Ends
