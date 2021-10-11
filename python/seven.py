@@ -1,4 +1,4 @@
-#how to divide by seven the easy way.
+#how to multiply by seven the easy way.
 
 def multiplyBySeven(n):
 
