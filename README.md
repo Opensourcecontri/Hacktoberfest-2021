@@ -1,4 +1,4 @@
-#  Hacktoberfest_2021 
+#  Hacktoberfest-2021 
 ![Screenshot 2021-09-29 at 12 29 41 AM](https://user-images.githubusercontent.com/29686102/135149193-d87a9188-6b54-4839-80dd-48d2a4983a80.png)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
