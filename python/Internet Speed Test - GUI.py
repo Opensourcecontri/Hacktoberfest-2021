@@ -17,6 +17,7 @@ def check():
     p.configure(text=str(int(st.results.ping))+"MS")
     l.configure(text="Speed Test Complete")
     
+# Setting the parameters for GUI.
 dspeed = tk.Label(root,text="Download Speed:",bg="#3b4d61",fg="yellow",font=font)
 dspeed.place(x=10,y=10)
 d = tk.Label(root,text="0 Mbps",bg="#3b4d61",fg="yellow",font=font)
