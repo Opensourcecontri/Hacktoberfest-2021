@@ -1,37 +1,86 @@
-#include<stdio.h>  
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int top = -1;
+char *stack;
+int size = 0;
 
-int main()    
+int isEmpty()
+{
+    if (top == -1)
+        return 1;
+    else
+        return 0;
+}
 
-{    
+int isFull()
+{
+    if (top == size)
+        return 1;
+    else
+        return 0;
+}
 
-int n,r,sum=0,temp;    
+void push(int value)
+{
+    if (!isFull())
+    {
+        top++;
+        stack[top] = value;
+    }
+}
 
-printf("enter the number=");    
+char pop()
+{
+    if (!isEmpty())
+    {
+        char temp = stack[top];
+        top--;
+        return temp;
+    }
+}
 
-scanf("%d",&n);    
+void printOutput(int palindrome, char *string)
+{
 
-temp=n;    
+    printf("\nOutput : This string is ");
 
-while(n>0)    
+    if (palindrome != 1)
+        printf("not ");
 
-{    
+    printf("a palindrome\n");
+}
 
-r=n%10;    
+int main()
+{
+    char string[50];
+    printf("Enter the string : ");
+    scanf("%s", string);
+    printf("\nInput : %s \n", string);
+    size = strlen(string);
 
-sum=(sum*10)+r;    
+    stack = (char *)calloc(size / 2, sizeof(char));
 
-n=n/10;    
+    int i;
+    int palindrome = 1;
+    for (i = 0; i < size / 2; i++)
+    {
+        push(string[i]);
+    }
 
-}    
+    if (size % 2 == 1)
+        i++;
 
-if(temp==sum)    
+    int j = i;
+    while (string[j] != '\0')
+    {
+        char temp = pop();
+        if (temp != string[j])
+            palindrome = 0;
+        j++;
+    }
 
-printf("palindrome number ");    
+    printOutput(palindrome, string);
 
-else    
-
-printf("not palindrome");   
-
-return 0;  
-
-}   
+    return 0;
+}
